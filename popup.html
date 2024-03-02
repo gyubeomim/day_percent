@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Day Percent</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #fff;
+			padding: 150px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		input[type="time"] {
+			border: none;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
+			font-size: 16px;
+			width: 100%;
+			padding: 5px 0;
+		}
+
+		#start_btn {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		#start_btn:hover {
+			background-color: #3e8e41;
+		}
+
+		#stop_btn {
+			background-color: #af4c4c;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		#stop_btn:hover {
+			background-color: #8e3e3e;
+		}
+
+		#save {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+
+		#save:hover {
+			background-color: #3e8e41;
+		}
+
+		textarea {
+			width: 150px;
+			height: 150px;
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			resize: both;
+			/* make the text area resizable */
+			margin-bottom: 20px;
+			font-size: 16px;
+			font-weight: bold;
+			background-color: #f0f0f0;
+			color: #444;
+			text-align: left;
+		}
+
+		.textarea-container {
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h2>Day Percent</h2>
+		<label for="start">Start:</label>
+		<input type="time" id="start" name="start" value="07:00">
+		<label for="end">End:</label>
+		<input type="time" id="end" name="end" value="23:59">
+		<p><input type="button" id="start_btn" value="Start">
+			<input type="button" id="stop_btn" value="Stop">
+		</p> <br>
+
+		<label for="notepad">Notepad:</label>
+		<textarea id="notepad" placeholder="Take some notes..."></textarea>
+		<input type="button" id="save" value="Save">
+	</div>
+	<script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
